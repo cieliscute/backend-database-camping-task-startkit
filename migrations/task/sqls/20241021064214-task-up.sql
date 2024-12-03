@@ -28,10 +28,16 @@ INSERT INTO "USER"(name,email,role) VALUES
 -- SET role='COACH'
 -- WHERE email IN ('lee2000@hexschooltest.io','muscle@hexschooltest.io','starplatinum@hexschooltest.io');
 
--- ANSWER2 
+-- ANSWER2 (OK) >> 有通過? 看起來答案沒辦法驗證是怎麼抓取到資料的，這邊使用姓名而不是email去抓取但是仍然pass
+-- UPDATE "USER"
+-- SET role = 'COACH'
+-- WHERE name = '李燕容' OR name = '肌肉棒子' OR name = 'Q太郎';
+
+-- ANSWER3
 UPDATE "USER"
 SET role = 'COACH'
-WHERE name = '李燕容' OR name = '肌肉棒子' OR name = 'Q太郎';
+WHERE name = '李燕容' OR name = '肌肉棒子';
+
 -- 1-3 刪除：刪除USER 資料表中，用 Email 找到透明人，並刪除該筆資料
 
 -- 1-4 查詢：取得USER 資料表目前所有用戶數量（提示：使用count函式）

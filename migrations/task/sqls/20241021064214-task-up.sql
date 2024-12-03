@@ -23,10 +23,15 @@ INSERT INTO "USER"(name,email,role) VALUES
 ('透明人','opacity0@hexschooltest.io','USER');
 
 -- 1-2 修改：用 Email 找到 李燕容、肌肉棒子、Q太郎，如果他的 Role 為 USER 將他的 Role 改為 COACH
-UPDATE "USER" 
-SET role='COACH'
-WHERE email IN ('lee2000@hexschooltest.io','muscle@hexschooltest.io','starplatinum@hexschooltest.io');
+-- ANSWER1 (OK)
+-- UPDATE "USER" 
+-- SET role='COACH'
+-- WHERE email IN ('lee2000@hexschooltest.io','muscle@hexschooltest.io','starplatinum@hexschooltest.io');
 
+-- ANSWER2 
+UPDATE "USER"
+SET role = 'COACH'
+WHERE name = '李燕容' OR name = '肌肉棒子' OR name = 'Q太郎';
 -- 1-3 刪除：刪除USER 資料表中，用 Email 找到透明人，並刪除該筆資料
 
 -- 1-4 查詢：取得USER 資料表目前所有用戶數量（提示：使用count函式）

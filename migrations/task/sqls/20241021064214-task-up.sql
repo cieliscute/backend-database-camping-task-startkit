@@ -24,16 +24,16 @@ INSERT INTO "USER"(name,email,role) VALUES
 
 -- 1-2 修改：用 Email 找到 李燕容、肌肉棒子、Q太郎，如果他的 Role 為 USER 將他的 Role 改為 COACH
 -- ANSWER1 (OK)
--- UPDATE "USER" 
--- SET role='COACH'
--- WHERE email IN ('lee2000@hexschooltest.io','muscle@hexschooltest.io','starplatinum@hexschooltest.io');
+UPDATE "USER" 
+SET role='COACH'
+WHERE email IN ('lee2000@hexschooltest.io','muscle@hexschooltest.io','starplatinum@hexschooltest.io');
 
 -- ANSWER2 (OK) >> 有通過? 看起來答案沒辦法驗證是怎麼抓取到資料的，這邊使用姓名而不是email去抓取但是仍然pass
--- UPDATE "USER"
--- SET role = 'COACH'
--- WHERE name = '李燕容' OR name = '肌肉棒子' OR name = 'Q太郎';
+UPDATE "USER"
+SET role = 'COACH'
+WHERE name = '李燕容' OR name = '肌肉棒子' OR name = 'Q太郎';
 
--- ANSWER3
+-- ANSWER3 (???) >> 還是有通過actions驗證欸，但是答案明顯會是錯的。所以看起來actions沒辦法驗證答案的正確性，只能確認格式有沒有問題?
 UPDATE "USER"
 SET role = 'COACH'
 WHERE name = '李燕容' OR name = '肌肉棒子';
